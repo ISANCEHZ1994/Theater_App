@@ -31,3 +31,5 @@ hero = Movie.create({
 Ticket.create({
     movie_id: hero.id, user_id: israel.id
 })
+
+puts 'we seeded my dude'
