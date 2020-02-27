@@ -19,6 +19,13 @@ israel = User.create({
     phone_number: 13
 })
 
+raul =  User.create({
+        name: 'Raul Sanchez',
+        email: 'raulabear@fakemail.com',
+        password: '1993',
+        phone_number: 14
+    })
+
 # User.create({
 #     name: '',
 #     email: '',
@@ -43,9 +50,19 @@ joker = Movie.create({
     poster: 'https://www.joblo.com/assets/images/joblo/posters/2019/08/joker-poster-main2.jpg',
     released: '2019',
     trailer: 'zAGVQLHvwOY',
-    category: 'Psychological'
+    category: 'Psychological Thiller'
 
 })
+
+avengers =  Movie.create({
+        title: 'Avengers Endgame',
+        description: "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+        mpaa: 'PG-13',
+        poster: 'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
+        released: '2019',
+        trailer: 'TcMBFSGVi1c',
+        category: 'Action'
+    })
 
 # Movie.create({
 #     title: '',

@@ -1,12 +1,12 @@
 import React from 'react';
-import MovieComponent from './Components/MovieComponent';
+import TheaterComponent from './Components/TheaterPage';
 
 function App() {
   
   return (
     <div>
-        Hello here we'll have somethings!
-        <MovieComponent/>
+       
+        <TheaterComponent/>
     </div>
   );
 }

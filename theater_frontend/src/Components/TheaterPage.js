@@ -1,5 +1,5 @@
 import React from 'react';
-
+import MovieList from './MovieList';
 
 export default class TheaterPage extends React.Component{
 
@@ -20,7 +20,11 @@ export default class TheaterPage extends React.Component{
     render(){
         return(
             <div>
-                here we got a menu with all the movies avalable {console.log(this.state.movies)}
+               <h1 style={{textAlign: 'center'}}> Izzy's 'Deluxe' Theater </h1>
+               <br></br>
+               <br></br>
+
+               <MovieList movies={this.state.movies}/>
             </div>
         );
     };
