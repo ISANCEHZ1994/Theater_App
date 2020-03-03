@@ -1,5 +1,5 @@
 import React from 'react';
-import Movie from './Movie';
+import Movie from '../Movie/Movie';
 
 export default class MovieList extends React.Component{
 
@@ -9,7 +9,7 @@ export default class MovieList extends React.Component{
 
         return(
             <div>
-                Here is the movie list!
+               <h1>We Got Some of The Best Hits</h1>
                 <div>
                     {this.props.movies.map( movie => 
                         <Movie 

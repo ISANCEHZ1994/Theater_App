@@ -1,5 +1,5 @@
 import React from 'react';
-import TheaterComponent from './Components/TheaterPage';
+import TheaterComponent from './Components/TheaterPage/TheaterPage';
 
 function App() {
   
