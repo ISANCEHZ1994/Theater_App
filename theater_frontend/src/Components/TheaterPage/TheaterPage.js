@@ -1,5 +1,6 @@
 import React from 'react';
 import MovieList from '../MovieList/MovieList';
+import Food from '../FoodIcon/Food';
 
 // const TICKET_PRICE = {
     
@@ -39,12 +40,14 @@ export default class TheaterPage extends React.Component{
     
     render(){
         return(
-            <div>
+            <div style={{backgroundColor: 'red'}}>
                <h1 style={{textAlign: 'center'}}> Izzy's 'Deluxe' Theater </h1>
-               <br></br>
-               <br></br>
+           
+               
                 
                <MovieList movies={this.state.movies}/>
+               <Food/>
+               bottom of the theater page
             </div>
         );
     };
