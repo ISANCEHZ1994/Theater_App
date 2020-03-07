@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieList from '../MovieList/MovieList';
-import Food from '../FoodIcon/Food';
+import Menu from '../Menu/Menu';
 
 // const TICKET_PRICE = {
     
@@ -18,8 +18,16 @@ export default class TheaterPage extends React.Component{
             senior: 2
         },
         food_price: {
-            popcorn: 8,
-            drink: 8,
+            popcorn: {
+                small: 4,
+                medium: 6,
+                large: 8
+            },
+            drink: {
+                small: 4,
+                medium: 6,
+                large: 8
+            },
             candy: 5,
             nachos: 6,
             hotdog: 7
@@ -46,8 +54,8 @@ export default class TheaterPage extends React.Component{
                
                 
                <MovieList movies={this.state.movies}/>
-               <Food/>
-               bottom of the theater page
+               <Menu/>
+               bottom of the Theater Page
             </div>
         );
     };

@@ -13,10 +13,10 @@ export default class MovieList extends React.Component{
             <div style={{background: 'green'}}>
                <h1 style={{textAlign: 'center'}}>We Got Some of The Best Hits !</h1>
                <Container>
-                    <Row>
+                    <Row style={{ paddingLeft: 0, paddingRight: 0 }}>
                         {this.props.movies.map( movie => 
                         //  <Row>
-                        <Col>
+                        <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
                         <Movie 
                         key={movie.id}
                         title={movie.title}
