@@ -2,13 +2,9 @@ import React from 'react';
 import MovieList from '../MovieList/MovieList';
 import Menu from '../Menu/Menu';
 
-// const TICKET_PRICE = {
-    
-// }
 
 export default class TheaterPage extends React.Component{
 
-    
 
     state={
         movies: [],
@@ -55,6 +51,8 @@ export default class TheaterPage extends React.Component{
                 
                <MovieList movies={this.state.movies}/>
                <Menu/>
+
+               <h1>  YOUR TOTAL IS: $____ </h1>
                bottom of the Theater Page
             </div>
         );
