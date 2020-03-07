@@ -15,7 +15,6 @@ export default class MovieList extends React.Component{
                <Container>
                     <Row style={{ paddingLeft: 0, paddingRight: 0 }}>
                         {this.props.movies.map( movie => 
-                        //  <Row>
                         <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
                         <Movie 
                         key={movie.id}
@@ -28,7 +27,6 @@ export default class MovieList extends React.Component{
                         category={movie.category}
                         />
                         </Col>
-                        // </Row>
                         )}
                      </Row>
                 </Container>
