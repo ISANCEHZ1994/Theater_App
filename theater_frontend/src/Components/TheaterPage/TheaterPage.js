@@ -51,9 +51,9 @@ export default class TheaterPage extends React.Component{
                 
                <MovieList movies={this.state.movies}/>
                <Menu/>
-
+                <br></br>
                <h1>  YOUR TOTAL IS: $____ </h1>
-               bottom of the Theater Page
+               
             </div>
         );
     };
