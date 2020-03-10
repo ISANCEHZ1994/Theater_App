@@ -5,13 +5,26 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 export default class MovieList extends React.Component{
 
+    state={
+        showList: false
+    }
+
+    displayingList = () => {
+        this.setState({
+            showList: !this.state.showList
+        })
+    }
+
+    renderMovieList = () => { 
+
+    }
 
     render(){
 
 
         return(
             <div style={{background: 'green'}}>
-               <h1 style={{textAlign: 'center'}}>We Got Some of The Best Hits !</h1>
+               <h1 style={{textAlign: 'center'}}> LOOK WHAT WE GOT!</h1>
                <Container>
                     <Row style={{ paddingLeft: 0, paddingRight: 0 }}>
                         {this.props.movies.map( movie => 
@@ -30,7 +43,7 @@ export default class MovieList extends React.Component{
                         )}
                      </Row>
                 </Container>
-                this is the bottom of the MovieList
+                <br></br>
             </div>
         )
     }
