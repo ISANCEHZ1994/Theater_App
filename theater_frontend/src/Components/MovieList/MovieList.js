@@ -15,17 +15,9 @@ export default class MovieList extends React.Component{
         })
     }
 
-    renderMovieList = () => { 
-
-    }
-
-    render(){
-
-
-        return(
-            <div style={{background: 'green'}}>
-               <h1 style={{textAlign: 'center'}}> LOOK WHAT WE GOT!</h1>
-               <Container>
+    renderMovieList = () => {
+        if(this.state.showList === true)return(
+            <Container>
                     <Row style={{ paddingLeft: 0, paddingRight: 0 }}>
                         {this.props.movies.map( movie => 
                         <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
@@ -42,7 +34,18 @@ export default class MovieList extends React.Component{
                         </Col>
                         )}
                      </Row>
-                </Container>
+             </Container>
+        )
+    }
+
+    render(){
+
+
+        return(
+            <div style={{background: 'green'}}>
+               <h1 style={{textAlign: 'center'}} onClick={this.displayingList}> Check Out These Hot Movies! </h1>
+               {this.renderMovieList()}
+              
                 <br></br>
             </div>
         )

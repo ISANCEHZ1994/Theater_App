@@ -3,9 +3,18 @@ import './Movie.css'
 
 
 export default class Movie extends React.Component{
+
+    state={
+        showButtons: false
+    }
+
+
+
     render(){
+
+
         return(
-        <div style={{backgroundColor: 'blue', textAlign: 'center'}} className='movieCard' > 
+        <div style={{backgroundColor: 'blue', textAlign: 'center', borderRadius: '25px'}} className='movieCard' > 
                 <h2>{this.props.title}</h2>
                 <img src={this.props.poster} alt='movie poster here' width='300px'/>
 
@@ -24,10 +33,6 @@ export default class Movie extends React.Component{
                         Senior
                     </div>
                 </div>
-
-                {/* <button> Adult </button> 
-                <button> Kid </button>
-                <button> Senior </button> */}
             
         </div>
         )

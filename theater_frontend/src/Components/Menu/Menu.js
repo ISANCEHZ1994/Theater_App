@@ -15,12 +15,12 @@ export default class Menu extends React.Component{
         displayMenu: false,
     }
 
-    sizeOptions = (opt) => {
-        console.log('i was clickedd', opt)
-        this.setState({
-            buttonsShow: !this.state.buttonsShow
-        })
-    }
+    // sizeOptions = (opt) => {
+    //     console.log('i was clickedd', opt)
+    //     this.setState({
+    //         buttonsShow: !this.state.buttonsShow
+    //     })
+    // }
 
     showMenu = () => {
         this.setState({
@@ -32,27 +32,13 @@ export default class Menu extends React.Component{
        if(this.state.displayMenu === true)
            return(
             <Container>
+
            <Popcorn/>
-            <Row>
-                <Col>
-                    <img src='https://cdn2.iconfinder.com/data/icons/food-and-drink-55/50/soda-10-512.png' alt='soft_drink' height='100px' width='110px' onClick={()=>this.sizeOptions('soft_drink')}/>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <img src='https://cdn3.iconfinder.com/data/icons/bazza-christmas-and-new-year/60/candy-512.png' alt='candy' height='100px' width='110px' onClick={()=>this.sizeOptions('candy')}/>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                <img src='https://i.pinimg.com/originals/25/8c/e3/258ce331776f0fce6563c24d7c269e8d.png' alt='nachos' height='100px' width='110px' onClick={()=>this.sizeOptions('nachos')}/>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                <img src='https://cdn3.iconfinder.com/data/icons/barbecue-icons-1/485/Hot_Dog-512.png' alt='hot_dog' height='100px' width='110px' onClick={()=>this.sizeOptions('hotdog')}/>
-                </Col>
-            </Row>
+           <SoftDrink/>
+           <Candy/>
+           <Nachos/>
+           <Hotdog/>
+            
         </Container>       
     
             )
