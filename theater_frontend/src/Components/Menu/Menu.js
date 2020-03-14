@@ -5,7 +5,7 @@ import Nachos from '../Menu/MenuContents/Nachos';
 import Candy from '../Menu/MenuContents/Candy';
 import Hotdog from '../Menu/MenuContents/Hotdog';
 import './Menu.css'
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 
 export default class Menu extends React.Component{
@@ -33,13 +33,13 @@ export default class Menu extends React.Component{
            return(
             <Container>
 
-           <Popcorn/>
-           <SoftDrink/>
-           <Candy/>
-           <Nachos/>
-           <Hotdog/>
+                <Popcorn/>
+                <SoftDrink/>
+                <Candy/>
+                <Nachos/>
+                <Hotdog/>
             
-        </Container>       
+            </Container>       
     
             )
     };
@@ -53,6 +53,7 @@ export default class Menu extends React.Component{
                      <h1 style={{textAlign: 'center'}} onClick={this.showMenu} > Would You Like Some Snacks? </h1>
                     
                      {this.renderMenu()}
+                     <br></br>
             </div>
            
         )

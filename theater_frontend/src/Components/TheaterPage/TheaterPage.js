@@ -7,6 +7,7 @@ export default class TheaterPage extends React.Component{
 
 
     state={
+
         // showAbout: false,
         movies: [],
         ticket_price: {
@@ -25,9 +26,21 @@ export default class TheaterPage extends React.Component{
                 medium: 6,
                 large: 8
             },
-            candy: 5,
-            nachos: 6,
-            hotdog: 7
+            candy: {
+                snickers: 5,
+                mnms: 5,
+                reeses: 5
+            },
+            nachos: {
+                regular: 5,
+                extra: 6,
+                deluxe: 7.5
+            },
+            hotdog: {
+                regular: 5,
+                extra: 6,
+                deluxe: 7.5
+            }
         },
         total_price: 0,
         
@@ -49,13 +62,13 @@ export default class TheaterPage extends React.Component{
     //     })
     // }
 
-    renderAboutPage = () => {
-        return(
-            <div>
-                something about why I made the theater here
-            </div>
-        )
-    }
+    // renderAboutPage = () => {
+    //     return(
+    //         <div>
+    //             something about why I made the theater here
+    //         </div>
+    //     )
+    // }
     
     render(){
         return(
@@ -63,8 +76,6 @@ export default class TheaterPage extends React.Component{
                <h1 style={{textAlign: 'center'}}> Izzy's 'Deluxe' Theater </h1>
 
            
-               {this.renderAboutPage()}
-             
 
                <MovieList movies={this.state.movies}/>
                <Menu/>
