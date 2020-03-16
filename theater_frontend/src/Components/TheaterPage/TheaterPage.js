@@ -42,7 +42,7 @@ export default class TheaterPage extends React.Component{
                 deluxe: 7.5
             }
         },
-        total_price: 0,
+        total_price: 0
         
     }
 
@@ -56,6 +56,35 @@ export default class TheaterPage extends React.Component{
      ) 
     }
 
+    addingAdultTicket = () => {
+        const adult_price = this.state.ticket_price.adult
+        const total = this.state.total_price
+
+        this.setState({
+            total_price: adult_price + total
+        })
+    }
+
+    addingKidTicket = () => {
+        const kid_price = this.state.ticket_price.kid
+        const total = this.state.total_price
+
+        this.setState({
+            total_price: kid_price + total
+        })
+    }
+
+    addingSeniorTicket=()=>{
+        const senior_price = this.state.ticket_price.senior
+        const total = this.state.total_price
+
+        this.setState({
+            total_price: senior_price + total
+        })
+    }
+       
+    
+
     
     render(){
         return(
@@ -64,7 +93,13 @@ export default class TheaterPage extends React.Component{
 
            
 
-               <MovieList movies={this.state.movies} ticket_price={this.state.ticket_price}/>
+               <MovieList 
+               movies={this.state.movies} 
+               ticket_price={this.state.ticket_price}
+               addingAdult={this.addingAdultTicket}
+               addingKid={this.addingKidTicket}
+               addingSenior={this.addingSeniorTicket}
+               />
                <Menu food_price={this.state.food_price}/>
 
                 <br></br>

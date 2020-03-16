@@ -13,32 +13,23 @@ export default class Movie extends React.Component{
         this.setState({
             showButtons: !this.state.showButtons
         })
+
     }
 
-    showTicketPrice = () => {
-        console.log('clicked on a ticket')
-    }
+   
     
     renderTickets = () => {
         if(this.state.showButtons === true){
             return(
-                <div onClick={this.showTickets}>
-                    <TicketButtons/>
-                {/* <div style={{backgroundColor: 'purple'}} className='button'>
-                    Adult
-                </div>
-                <div style={{backgroundColor: 'orange'}} className='button'>
-                    Kid
-                </div>
-                <div style={{backgroundColor: 'grey'}} className='button'>
-                    Senior
-                </div> */}
+                <div style={{backgroundColor: 'brown'}}  onClick={this.showTickets}>
+                    <TicketButtons ticket_price={this.props.ticket_price}/>
+                
             </div>
             )
         }
         if(this.state.showButtons === false){
             return(
-                <div onClick={this.showTickets}>
+                <div style={{backgroundColor: 'brown'}} onClick={this.showTickets}>
                     <h1> Click Here for Tickets </h1>
                 </div>
             )
@@ -59,6 +50,7 @@ export default class Movie extends React.Component{
                 </div>
                 
                 {this.renderTickets()}
+                
                
         </div>
         )

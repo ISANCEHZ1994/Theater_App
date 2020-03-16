@@ -2,7 +2,7 @@
     width: 350px;
 }
 
-.buttonContainer{
+/* .buttonContainer{
   display: grid;
   grid-column-gap: 10px;
   grid-template-columns: auto auto auto;
@@ -17,8 +17,8 @@
   text-align: center;
   top: 25%;
   left: 25%;
-  /* transform: translate(-50%, -50%); */
-  /* z-index: 2; */
+  transform: translate(-50%, -50%);
+  z-index: 2;
   padding: 30px;
   padding-top: 50%;
-}
+} */
