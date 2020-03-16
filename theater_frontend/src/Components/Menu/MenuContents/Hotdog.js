@@ -20,6 +20,7 @@ export default class Hotdog extends React.Component{
           return(
              <Row>
                 <Col>
+                    {/* <h2> Hotdog </h2> */}
                     <img src='https://cdn3.iconfinder.com/data/icons/barbecue-icons-1/485/Hot_Dog-512.png' alt='hot_dog' height='100px' width='110px' onClick={this.buttonReveal}/>
                 </Col>
                 <Col>
@@ -35,6 +36,7 @@ export default class Hotdog extends React.Component{
       if(this.state.showButtons === false) {return(
             <Row>
                 <Col>
+                    {/* <h2> Hotdog </h2> */}
                     <img src='https://cdn3.iconfinder.com/data/icons/barbecue-icons-1/485/Hot_Dog-512.png' alt='hot_dog' height='100px' width='110px' onClick={this.buttonReveal}/>
                 </Col>
             </Row>

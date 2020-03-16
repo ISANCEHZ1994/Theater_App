@@ -1,4 +1,5 @@
 import React from 'react';
+import TicketButtons from './TicketButtons/TicketButtons';
 import './Movie.css'
 
 
@@ -13,12 +14,17 @@ export default class Movie extends React.Component{
             showButtons: !this.state.showButtons
         })
     }
+
+    showTicketPrice = () => {
+        console.log('clicked on a ticket')
+    }
     
     renderTickets = () => {
         if(this.state.showButtons === true){
             return(
-                <div className='buttonContainer' onClick={this.showTickets}>
-                <div style={{backgroundColor: 'purple'}} className='button'>
+                <div onClick={this.showTickets}>
+                    <TicketButtons/>
+                {/* <div style={{backgroundColor: 'purple'}} className='button'>
                     Adult
                 </div>
                 <div style={{backgroundColor: 'orange'}} className='button'>
@@ -26,13 +32,13 @@ export default class Movie extends React.Component{
                 </div>
                 <div style={{backgroundColor: 'grey'}} className='button'>
                     Senior
-                </div>
+                </div> */}
             </div>
             )
         }
         if(this.state.showButtons === false){
             return(
-                <div className='buttonContainer' onClick={this.showTickets}>
+                <div onClick={this.showTickets}>
                     <h1> Click Here for Tickets </h1>
                 </div>
             )
@@ -53,18 +59,7 @@ export default class Movie extends React.Component{
                 </div>
                 
                 {this.renderTickets()}
-                {/* <div className='buttonContainer'>
-                    <div style={{backgroundColor: 'purple'}} className='button'>
-                        Adult
-                    </div>
-                    <div style={{backgroundColor: 'orange'}} className='button'>
-                        Kid
-                    </div>
-                    <div style={{backgroundColor: 'grey'}} className='button'>
-                        Senior
-                    </div>
-                </div> */}
-            
+               
         </div>
         )
     }

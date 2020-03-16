@@ -14,6 +14,7 @@ export default class MovieList extends React.Component{
             showList: !this.state.showList
         })
     }
+   
 
     renderMovieList = () => {
         if(this.state.showList === true)return(
@@ -30,6 +31,7 @@ export default class MovieList extends React.Component{
                         released={movie.released}
                         trailer={movie.trailer}
                         category={movie.category}
+                        ticket_price={this.props.ticket_price}
                         />
                         </Col>
                         )}
@@ -45,6 +47,7 @@ export default class MovieList extends React.Component{
             <div style={{background: 'green'}}>
                <h1 style={{textAlign: 'center'}} onClick={this.displayingList}> Check Out These Hot Movies! </h1>
                {this.renderMovieList()}
+               
               
                 <br></br>
             </div>

@@ -56,7 +56,26 @@ export default class TheaterPage extends React.Component{
      ) 
     }
 
-    // displayingAboutPage = () => {
+    
+    render(){
+        return(
+            <div style={{backgroundColor: 'red'}}>
+               <h1 style={{textAlign: 'center'}}> Izzy's 'Deluxe' Theater </h1>
+
+           
+
+               <MovieList movies={this.state.movies} ticket_price={this.state.ticket_price}/>
+               <Menu food_price={this.state.food_price}/>
+
+                <br></br>
+        <h1>  YOUR TOTAL IS: $ {this.state.total_price} </h1>
+               
+            </div>
+        );
+    };
+};
+
+ // displayingAboutPage = () => {
     //     this.setState({
     //         showAbout: !this.state.showAbout
     //     })
@@ -69,20 +88,3 @@ export default class TheaterPage extends React.Component{
     //         </div>
     //     )
     // }
-    
-    render(){
-        return(
-            <div style={{backgroundColor: 'red'}}>
-               <h1 style={{textAlign: 'center'}}> Izzy's 'Deluxe' Theater </h1>
-
-           
-
-               <MovieList movies={this.state.movies}/>
-               <Menu/>
-                <br></br>
-               <h1>  YOUR TOTAL IS: $ </h1>
-               
-            </div>
-        );
-    };
-};

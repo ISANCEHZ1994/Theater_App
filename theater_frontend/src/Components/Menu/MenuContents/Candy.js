@@ -20,6 +20,7 @@ export default class Candy extends React.Component{
           return(
              <Row>
                 <Col>
+                    {/* <h2> Candy </h2> */}
                     <img src='https://cdn3.iconfinder.com/data/icons/bazza-christmas-and-new-year/60/candy-512.png' alt='candy' height='100px' width='110px' onClick={this.buttonReveal}/>
                 </Col>
                 <Col>
@@ -35,6 +36,7 @@ export default class Candy extends React.Component{
       if(this.state.showButtons === false) {return(
             <Row>
                 <Col>
+                    {/* <h2> Candy </h2> */}
                     <img src='https://cdn3.iconfinder.com/data/icons/bazza-christmas-and-new-year/60/candy-512.png' alt='candy' height='100px' width='110px' onClick={this.buttonReveal}/>
                 </Col>
             </Row>
