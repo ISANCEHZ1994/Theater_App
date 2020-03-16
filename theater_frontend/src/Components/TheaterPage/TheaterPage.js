@@ -82,6 +82,37 @@ export default class TheaterPage extends React.Component{
             total_price: senior_price + total
         })
     }
+
+    // addingPopcorn = () => {
+    //     const small = this.state.food_price.popcorn.small
+    //     const medium = this.state.food_price.popcorn.medium
+    //     const large = this.state.food_price.popcorn.large
+    //     const total = this.state.total_price
+
+    // }
+    addingPopcornSmall = () => {
+        const small = this.state.food_price.popcorn.small
+        const total = this.state.total_price
+        this.setState({
+            total_price: small + total
+        })
+    }
+
+    addingPopcornMedium = () => {
+        const medium = this.state.food_price.popcorn.medium
+        const total = this.state.total_price
+        this.setState({
+            total_price: medium + total
+        })
+    }
+
+    addingPopcornLarge = () => {
+        const large = this.state.food_price.popcorn.large
+        const total = this.state.total_price
+        this.setState({
+            total_price: large + total
+        })
+    }
        
     
 
@@ -95,12 +126,18 @@ export default class TheaterPage extends React.Component{
 
                <MovieList 
                movies={this.state.movies} 
-               ticket_price={this.state.ticket_price}
+            //    ticket_price={this.state.ticket_price}
                addingAdult={this.addingAdultTicket}
                addingKid={this.addingKidTicket}
                addingSenior={this.addingSeniorTicket}
+
                />
-               <Menu food_price={this.state.food_price}/>
+               <Menu 
+                // food_price={this.state.food_price}
+                addingSmall={this.state.addingPopcornSmall}
+                addingMedium={this.state.addingPopcornMedium}
+                adddingLarge={this.state.addingPopcornLarge}
+               />
 
                 <br></br>
         <h1>  YOUR TOTAL IS: $ {this.state.total_price} </h1>

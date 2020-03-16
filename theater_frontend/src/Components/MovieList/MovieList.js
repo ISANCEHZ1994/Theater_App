@@ -31,8 +31,11 @@ export default class MovieList extends React.Component{
                         released={movie.released}
                         trailer={movie.trailer}
                         category={movie.category}
-                        ticket_price={this.props.ticket_price}
                         
+                        ticket_price={this.props.ticket_price}
+                        passingAdult={this.props.addingAdult}
+                        passingKid={this.props.addingKid}
+                        passingSenior={this.props.addingSenior}
                         />
                         </Col>
                         )}

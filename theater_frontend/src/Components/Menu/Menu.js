@@ -33,7 +33,11 @@ export default class Menu extends React.Component{
            return(
             <Container>
 
-                <Popcorn/>
+                <Popcorn 
+                small={this.props.addingSmall}
+                medium={this.props.addingMedium}
+                large={this.props.addingLarge}
+                />
                 <SoftDrink/>
                 <Candy/>
                 <Nachos/>

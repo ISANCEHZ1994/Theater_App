@@ -4,9 +4,6 @@ import './TicketButtons.css';
 export default class TicketButtons extends React.Component{
 
 
-    typeOfTicket = () => {
-        console.log(this.props)
-    }
 
     render(){
         
@@ -14,13 +11,13 @@ export default class TicketButtons extends React.Component{
 
         return(
             <div className='buttonContainer'>
-                    <div style={{backgroundColor: 'purple'}} className='button' onClick={() => console.log(this.props.ticket_price.adult)}>
+                    <div style={{backgroundColor: 'purple'}} className='button' onClick={() => this.props.addingAdult()}>
                         Adult
                     </div>
-                    <div style={{backgroundColor: 'orange'}} className='button' onClick={() => console.log(this.props.ticket_price.kid)}>
+                    <div style={{backgroundColor: 'orange'}} className='button' onClick={() => this.props.addingKid()}>
                         Kid
                     </div>
-                    <div style={{backgroundColor: 'grey'}} className='button' onClick={() => console.log(this.props.ticket_price.senior)}>
+                    <div style={{backgroundColor: 'grey'}} className='button' onClick={() => this.props.addingSenior()}>
                         Senior
                     </div>
             </div>

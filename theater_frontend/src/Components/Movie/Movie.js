@@ -21,8 +21,13 @@ export default class Movie extends React.Component{
     renderTickets = () => {
         if(this.state.showButtons === true){
             return(
-                <div style={{backgroundColor: 'brown'}}  onClick={this.showTickets}>
-                    <TicketButtons ticket_price={this.props.ticket_price}/>
+                <div style={{backgroundColor: 'brown'}}  >
+                    <TicketButtons
+                    
+                     addingAdult={this.props.passingAdult}
+                     addingKid={this.props.passingKid}
+                     addingSenior={this.props.passingSenior}
+                     />
                 
             </div>
             )
