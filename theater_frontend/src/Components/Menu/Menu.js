@@ -34,11 +34,16 @@ export default class Menu extends React.Component{
             <Container>
 
                 <Popcorn 
-                small={this.props.addingSmall}
-                medium={this.props.addingMedium}
-                large={this.props.addingLarge}
+                // food_price={this.props.food_price}
+                addingSmall={this.props.passingSmallPopcorn}
+                addingMedium={this.props.passingMediumPopcorn}
+                addingLarge={this.props.passingLargePopcorn}
                 />
-                <SoftDrink/>
+                <SoftDrink
+                addingSmallDrink={this.props.passingSmallDrink}
+                addingMediumDrink={this.props.passingMediumDrink}
+                addingLargeDrink={this.props.passingLargeDrink}
+                />
                 <Candy/>
                 <Nachos/>
                 <Hotdog/>

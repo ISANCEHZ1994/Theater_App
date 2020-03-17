@@ -90,6 +90,8 @@ export default class TheaterPage extends React.Component{
     //     const total = this.state.total_price
 
     // }
+
+    //POPCORN METHODS
     addingPopcornSmall = () => {
         const small = this.state.food_price.popcorn.small
         const total = this.state.total_price
@@ -113,8 +115,44 @@ export default class TheaterPage extends React.Component{
             total_price: large + total
         })
     }
-       
     
+    //SOFT DRINK METHODS
+    addingSoftdrinkSmall = () => {
+        const small = this.state.food_price.drink.small
+        const total = this.state.total_price
+        this.setState({
+            total_price: small + total
+        })
+    }
+
+    addingSoftdrinkMedium = () => {
+        const medium = this.state.food_price.drink.medium
+        const total = this.state.total_price 
+        this.setState({
+            total_price: medium + total
+        })
+    }
+
+    addingSoftdrinkLarge = () => {
+        const large = this.state.food_price.drink.large
+        const total = this.state.total_price
+        this.setState({
+            total_price: large + total
+        })
+    }
+
+    //CANDY
+    addingSnickers = () => {
+        const snickers = this.state.food_price.candy.snickers
+        const total = this.state.total_price
+        this.setState({
+            total_price: snickers + total
+        })
+    }
+    
+    addingMnMs = () => {
+        
+    }
 
     
     render(){
@@ -134,9 +172,15 @@ export default class TheaterPage extends React.Component{
                />
                <Menu 
                 // food_price={this.state.food_price}
-                addingSmall={this.state.addingPopcornSmall}
-                addingMedium={this.state.addingPopcornMedium}
-                adddingLarge={this.state.addingPopcornLarge}
+                passingSmallPopcorn={this.addingPopcornSmall}
+                passingMediumPopcorn={this.addingPopcornMedium}
+                passingLargePopcorn={this.addingPopcornLarge}
+
+                passingSmallDrink={this.addingSoftdrinkSmall}
+                passingMediumDrink={this.addingSoftdrinkMedium}
+                passingLargeDrink={this.addingSoftdrinkLarge}
+
+
                />
 
                 <br></br>
@@ -146,17 +190,3 @@ export default class TheaterPage extends React.Component{
         );
     };
 };
-
- // displayingAboutPage = () => {
-    //     this.setState({
-    //         showAbout: !this.state.showAbout
-    //     })
-    // }
-
-    // renderAboutPage = () => {
-    //     return(
-    //         <div>
-    //             something about why I made the theater here
-    //         </div>
-    //     )
-    // }

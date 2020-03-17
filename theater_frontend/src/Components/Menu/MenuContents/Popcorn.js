@@ -24,9 +24,9 @@ export default class Popcorn extends React.Component{
                     <img src='https://i.pinimg.com/originals/7d/04/1c/7d041c7af4c707962900e6ab49608932.png' alt='popcorn' height='100px' width='110px' onClick={this.buttonReveal}/>
                 </Col>
                 <Col>
-                    <button onClick={this.props.small}> Small: $4  </button>
-                    <button onClick={ this.props.medium}> Medium: $6  </button>
-                    <button onClick={ this.props.large}> Large: $8  </button>
+                    <button onClick={() => this.props.addingSmall()}> Small: $4  </button>
+                    <button onClick={ () =>  this.props.addingMedium()}> Medium: $6  </button>
+                    <button onClick={ () => this.props.addingLarge()}> Large: $8  </button>
                 </Col>
              </Row>
              
