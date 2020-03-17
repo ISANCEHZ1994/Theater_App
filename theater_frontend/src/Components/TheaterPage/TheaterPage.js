@@ -183,7 +183,29 @@ export default class TheaterPage extends React.Component{
     }
 
     //HOTDOG METHODS
+    addingRegularHotdog = () => {
+        const regular = this.state.food_price.hotdog.regular
+        const total = this.state.total_price
+        this.setState({
+            total_price: regular + total
+        }) 
+    }
 
+    addingExtraHotdog = () => {
+        const extra = this.state.food_price.hotdog.extra
+        const total = this.state.total_price
+        this.setState({
+            total_price: extra + total
+        })
+    }
+
+    addingDeluxeHotdog = () => {
+        const deluxe = this.state.food_price.hotdog.deluxe
+        const total = this.state.total_price
+        this.setState({
+            total_price: deluxe + total
+        })
+    }
     
     render(){
         return(
@@ -194,14 +216,12 @@ export default class TheaterPage extends React.Component{
 
                <MovieList 
                movies={this.state.movies} 
-            //    ticket_price={this.state.ticket_price}
                addingAdult={this.addingAdultTicket}
                addingKid={this.addingKidTicket}
                addingSenior={this.addingSeniorTicket}
 
                />
                <Menu 
-                // food_price={this.state.food_price}
                 passingSmallPopcorn={this.addingPopcornSmall}
                 passingMediumPopcorn={this.addingPopcornMedium}
                 passingLargePopcorn={this.addingPopcornLarge}
@@ -217,6 +237,10 @@ export default class TheaterPage extends React.Component{
                 passingNachosRegular={this.addingRegularNachos}
                 passingNachosExtra={this.addingExtraNachos}
                 passingNachosDeluxe={this.addingDeluxeNachos}
+
+                passingHotdogRegular={this.addingRegularHotdog}
+                passingHotdogExtra={this.addingExtraHotdog}
+                passingHotdogDeluxe={this.addingDeluxeHotdog}
                />
 
                 <br></br>

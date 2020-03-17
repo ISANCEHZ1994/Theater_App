@@ -24,9 +24,9 @@ export default class Hotdog extends React.Component{
                     <img src='https://cdn3.iconfinder.com/data/icons/barbecue-icons-1/485/Hot_Dog-512.png' alt='hot_dog' height='100px' width='110px' onClick={this.buttonReveal}/>
                 </Col>
                 <Col>
-                    <button> Regular: $5  </button>
-                    <button> Extra: $6  </button>
-                    <button> Deluxe: $7.50  </button>
+                    <button onClick={() => this.props.addingRegularHotdogs()}> Regular: $5  </button>
+                    <button onClick={() => this.props.addingExtraHotdogs()}> Extra: $6  </button>
+                    <button onClick={() => this.props.addingDeluxeHotdogs()}> Deluxe: $7.50  </button>
                 </Col>
              </Row>
              

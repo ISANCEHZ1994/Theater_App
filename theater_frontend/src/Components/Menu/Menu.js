@@ -54,7 +54,11 @@ export default class Menu extends React.Component{
                 addingExtraNachos={this.props.passingNachosExtra}
                 addingDeluxeNachos={this.props.passingNachosDeluxe}
                 />
-                <Hotdog/>
+                <Hotdog
+                addingRegularHotdogs={this.props.passingHotdogRegular}
+                addingExtraHotdogs={this.props.passingHotdogExtra}
+                addingDeluxeHotdogs={this.props.passingHotdogDeluxe}
+                />
             
             </Container>       
     
