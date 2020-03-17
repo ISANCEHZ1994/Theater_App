@@ -83,14 +83,6 @@ export default class TheaterPage extends React.Component{
         })
     }
 
-    // addingPopcorn = () => {
-    //     const small = this.state.food_price.popcorn.small
-    //     const medium = this.state.food_price.popcorn.medium
-    //     const large = this.state.food_price.popcorn.large
-    //     const total = this.state.total_price
-
-    // }
-
     //POPCORN METHODS
     addingPopcornSmall = () => {
         const small = this.state.food_price.popcorn.small
@@ -141,7 +133,7 @@ export default class TheaterPage extends React.Component{
         })
     }
 
-    //CANDY
+    //CANDY METHODS
     addingSnickers = () => {
         const snickers = this.state.food_price.candy.snickers
         const total = this.state.total_price
@@ -151,8 +143,46 @@ export default class TheaterPage extends React.Component{
     }
     
     addingMnMs = () => {
-        
+        const mm = this.state.food_price.candy.mnms
+        const total = this.state.total_price
+        this.setState({
+            total_price: mm + total
+        })
     }
+
+    addingReeses = () => {
+        const reeses = this.state.food_price.candy.reeses
+        const total = this.state.total_price
+        this.setState({
+            total_price: reeses + total
+        })
+    }
+    //NACHO METHODS
+    addingRegularNachos = () => {
+        const regular = this.state.food_price.nachos.regular
+        const total = this.state.total_price
+        this.setState({
+            total_price: regular + total
+        })
+    }
+
+    addingExtraNachos = () => {
+        const extra = this.state.food_price.nachos.extra
+        const total = this.state.total_price
+        this.setState({
+            total_price: extra + total
+        })
+    }
+
+    addingDeluxeNachos = () => {
+        const deluxe = this.state.food_price.nachos.deluxe
+        const total = this.state.total_price
+        this.setState({
+            total_price: deluxe + total
+        })
+    }
+
+    //HOTDOG METHODS
 
     
     render(){
@@ -180,7 +210,13 @@ export default class TheaterPage extends React.Component{
                 passingMediumDrink={this.addingSoftdrinkMedium}
                 passingLargeDrink={this.addingSoftdrinkLarge}
 
+                passingSnickers={this.addingSnickers}
+                passingMM={this.addingMnMs}
+                passingReeses={this.addingReeses}
 
+                passingNachosRegular={this.addingRegularNachos}
+                passingNachosExtra={this.addingExtraNachos}
+                passingNachosDeluxe={this.addingDeluxeNachos}
                />
 
                 <br></br>

@@ -12,13 +12,13 @@ export default class TicketButtons extends React.Component{
         return(
             <div className='buttonContainer'>
                     <div style={{backgroundColor: 'purple'}} className='button' onClick={() => this.props.addingAdult()}>
-                        Adult
+                        Adult: $10
                     </div>
                     <div style={{backgroundColor: 'orange'}} className='button' onClick={() => this.props.addingKid()}>
-                        Kid
+                        Kid: $5
                     </div>
                     <div style={{backgroundColor: 'grey'}} className='button' onClick={() => this.props.addingSenior()}>
-                        Senior
+                        Senior: $2
                     </div>
             </div>
         )

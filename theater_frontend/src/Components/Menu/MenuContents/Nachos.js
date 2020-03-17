@@ -24,9 +24,9 @@ export default class Nachos extends React.Component{
                     <img src='https://i.pinimg.com/originals/25/8c/e3/258ce331776f0fce6563c24d7c269e8d.png' alt='nachos' height='100px' width='110px' onClick={this.buttonReveal}/>
                 </Col>
                 <Col>
-                    <button> Regular: $5  </button>
-                    <button> Extra: $6  </button>
-                    <button> Deluxe: $7.50  </button>
+                    <button onClick={() => this.props.addingRegularNachos()}> Regular: $5  </button>
+                    <button onClick={() => this.props.addingExtraNachos()}> Extra: $6  </button>
+                    <button onClick={() => this.props.addingDeluxeNachos()}> Deluxe: $7.50  </button>
                 </Col>
              </Row>
              
