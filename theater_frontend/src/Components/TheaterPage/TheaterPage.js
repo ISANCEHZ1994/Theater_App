@@ -9,13 +9,13 @@ export default class TheaterPage extends React.Component{
     state={
 
         // showAbout: false,
-        movies: [],
-        ticket_price: {
-            adult: 10,
-            kid: 5,
-            senior: 2
-        },
-        food_price: {
+            movies: [],
+            adultPrice: 10,
+            adultCounter: 0,
+            kidPrice: 5,
+            kidCounter: 0,
+            seniorPrice: 2,
+            seniorCounter: 0,
             popcorn: {
                 small: 4,
                 medium: 6,
@@ -40,9 +40,8 @@ export default class TheaterPage extends React.Component{
                 regular: 5,
                 extra: 6,
                 deluxe: 7.5
-            }
-        },
-        total_price: 0
+            },
+            total_price: 0
         
     }
 
@@ -56,36 +55,43 @@ export default class TheaterPage extends React.Component{
      ) 
     }
 
+    //TICKET METHODS
     addingAdultTicket = () => {
-        const adult_price = this.state.ticket_price.adult
+        const adult_price = this.state.adultPrice
         const total = this.state.total_price
+        const counter = this.state.adultCounter
 
         this.setState({
+            adultCounter: counter + 1,
             total_price: adult_price + total
         })
     }
 
     addingKidTicket = () => {
-        const kid_price = this.state.ticket_price.kid
+        const kid_price = this.state.kidPrice
         const total = this.state.total_price
+        const counter = this.state.kidCounter
 
         this.setState({
+            kidCounter: counter + 1,
             total_price: kid_price + total
         })
     }
 
     addingSeniorTicket=()=>{
-        const senior_price = this.state.ticket_price.senior
+        const senior_price = this.state.seniorPrice
         const total = this.state.total_price
+        const counter = this.state.seniorCounter
 
         this.setState({
+            seniorCounter: counter + 1,
             total_price: senior_price + total
         })
     }
 
     //POPCORN METHODS
     addingPopcornSmall = () => {
-        const small = this.state.food_price.popcorn.small
+        const small = this.state.popcorn.small
         const total = this.state.total_price
         this.setState({
             total_price: small + total
@@ -93,7 +99,7 @@ export default class TheaterPage extends React.Component{
     }
 
     addingPopcornMedium = () => {
-        const medium = this.state.food_price.popcorn.medium
+        const medium = this.state.popcorn.medium
         const total = this.state.total_price
         this.setState({
             total_price: medium + total
@@ -101,7 +107,7 @@ export default class TheaterPage extends React.Component{
     }
 
     addingPopcornLarge = () => {
-        const large = this.state.food_price.popcorn.large
+        const large = this.state.popcorn.large
         const total = this.state.total_price
         this.setState({
             total_price: large + total
@@ -110,7 +116,7 @@ export default class TheaterPage extends React.Component{
     
     //SOFT DRINK METHODS
     addingSoftdrinkSmall = () => {
-        const small = this.state.food_price.drink.small
+        const small = this.state.drink.small
         const total = this.state.total_price
         this.setState({
             total_price: small + total
@@ -118,7 +124,7 @@ export default class TheaterPage extends React.Component{
     }
 
     addingSoftdrinkMedium = () => {
-        const medium = this.state.food_price.drink.medium
+        const medium = this.state.drink.medium
         const total = this.state.total_price 
         this.setState({
             total_price: medium + total
@@ -126,7 +132,7 @@ export default class TheaterPage extends React.Component{
     }
 
     addingSoftdrinkLarge = () => {
-        const large = this.state.food_price.drink.large
+        const large = this.state.drink.large
         const total = this.state.total_price
         this.setState({
             total_price: large + total
@@ -135,7 +141,7 @@ export default class TheaterPage extends React.Component{
 
     //CANDY METHODS
     addingSnickers = () => {
-        const snickers = this.state.food_price.candy.snickers
+        const snickers = this.state.candy.snickers
         const total = this.state.total_price
         this.setState({
             total_price: snickers + total
@@ -143,7 +149,7 @@ export default class TheaterPage extends React.Component{
     }
     
     addingMnMs = () => {
-        const mm = this.state.food_price.candy.mnms
+        const mm = this.state.candy.mnms
         const total = this.state.total_price
         this.setState({
             total_price: mm + total
@@ -151,7 +157,7 @@ export default class TheaterPage extends React.Component{
     }
 
     addingReeses = () => {
-        const reeses = this.state.food_price.candy.reeses
+        const reeses = this.state.candy.reeses
         const total = this.state.total_price
         this.setState({
             total_price: reeses + total
@@ -159,7 +165,7 @@ export default class TheaterPage extends React.Component{
     }
     //NACHO METHODS
     addingRegularNachos = () => {
-        const regular = this.state.food_price.nachos.regular
+        const regular = this.state.nachos.regular
         const total = this.state.total_price
         this.setState({
             total_price: regular + total
@@ -167,7 +173,7 @@ export default class TheaterPage extends React.Component{
     }
 
     addingExtraNachos = () => {
-        const extra = this.state.food_price.nachos.extra
+        const extra = this.state.nachos.extra
         const total = this.state.total_price
         this.setState({
             total_price: extra + total
@@ -175,7 +181,7 @@ export default class TheaterPage extends React.Component{
     }
 
     addingDeluxeNachos = () => {
-        const deluxe = this.state.food_price.nachos.deluxe
+        const deluxe = this.state.nachos.deluxe
         const total = this.state.total_price
         this.setState({
             total_price: deluxe + total
@@ -184,7 +190,7 @@ export default class TheaterPage extends React.Component{
 
     //HOTDOG METHODS
     addingRegularHotdog = () => {
-        const regular = this.state.food_price.hotdog.regular
+        const regular = this.state.hotdog.regular
         const total = this.state.total_price
         this.setState({
             total_price: regular + total
@@ -206,22 +212,17 @@ export default class TheaterPage extends React.Component{
             total_price: deluxe + total
         })
     }
-
-    // function MyFunction =()=> {
-    //     var tempDate = new Date();
-    //     var date = tempDate.getFullYear() + '-' + (tempDate.getMonth()+1) + '-' + tempDate.getDate() +' '+ tempDate.getHours()+':'+ tempDate.getMinutes()+':'+ tempDate.getSeconds();
-    //     const currDate = "Current Date= "+date;
-    //     return (
-    //       <p>{currDate}</p>
-    //     );
-    //   }
     
     render(){
 
         function MyFunction(){
             var tempDate = new Date();
-            var date =  tempDate.getDate() + '-' + (tempDate.getMonth()+1) + '-' + tempDate.getFullYear() +' '+ tempDate.getHours()+':'+ tempDate.getMinutes()+':'+ tempDate.getSeconds();
-            const currDate = "Current Date= "+date;
+            var hours = tempDate.getHours();
+            var AmOrPm = hours >= 12 ? 'pm' : 'am';
+            hours = (hours % 12) || 12;
+
+            var date =  tempDate.getDate() + '/' + (tempDate.getMonth()+1) + '/' + tempDate.getFullYear() +' '+ hours+':'+ tempDate.getMinutes()+':'+ tempDate.getSeconds();
+            const currDate = "Today's Date "+date + AmOrPm;
             return (
               <h2 style={{textAlign: 'center'}}>{currDate}</h2>
             );
@@ -231,8 +232,6 @@ export default class TheaterPage extends React.Component{
         return(
             <div style={{backgroundColor: 'red'}}>
                <h1 style={{textAlign: 'center'}}> Izzy's 'Deluxe' Theater </h1>
-
-           
 
                <MovieList 
                movies={this.state.movies} 
@@ -264,8 +263,14 @@ export default class TheaterPage extends React.Component{
                />
 
                 <br></br>
+
             {MyFunction()}
 
+            <h3> These Are Your Tickets: </h3>
+            <h4> {this.state.adultCounter} Adult Ticket(s) </h4>
+            <h4> {this.state.kidCounter} Kid Ticket(s) </h4>
+            <h4> {this.state.seniorCounter} Kid Ticket(s) </h4>
+            
         <h1>  YOUR TOTAL IS: $ {this.state.total_price} </h1>
                
             </div>
