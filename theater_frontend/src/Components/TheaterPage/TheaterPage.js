@@ -206,8 +206,28 @@ export default class TheaterPage extends React.Component{
             total_price: deluxe + total
         })
     }
+
+    // function MyFunction =()=> {
+    //     var tempDate = new Date();
+    //     var date = tempDate.getFullYear() + '-' + (tempDate.getMonth()+1) + '-' + tempDate.getDate() +' '+ tempDate.getHours()+':'+ tempDate.getMinutes()+':'+ tempDate.getSeconds();
+    //     const currDate = "Current Date= "+date;
+    //     return (
+    //       <p>{currDate}</p>
+    //     );
+    //   }
     
     render(){
+
+        function MyFunction(){
+            var tempDate = new Date();
+            var date =  tempDate.getDate() + '-' + (tempDate.getMonth()+1) + '-' + tempDate.getFullYear() +' '+ tempDate.getHours()+':'+ tempDate.getMinutes()+':'+ tempDate.getSeconds();
+            const currDate = "Current Date= "+date;
+            return (
+              <h2 style={{textAlign: 'center'}}>{currDate}</h2>
+            );
+          }
+
+
         return(
             <div style={{backgroundColor: 'red'}}>
                <h1 style={{textAlign: 'center'}}> Izzy's 'Deluxe' Theater </h1>
@@ -244,6 +264,8 @@ export default class TheaterPage extends React.Component{
                />
 
                 <br></br>
+            {MyFunction()}
+
         <h1>  YOUR TOTAL IS: $ {this.state.total_price} </h1>
                
             </div>

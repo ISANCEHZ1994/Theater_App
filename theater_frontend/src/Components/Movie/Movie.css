@@ -2,23 +2,13 @@
     width: 350px;
 }
 
-/* .buttonContainer{
-  display: grid;
-  grid-column-gap: 10px;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
-  background-color: brown;
+.movieDescription{
+  background-color: white; 
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(194, 177, 177, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.button{
-  height: 150px;
-  width: auto;
-  margin: auto;
-  text-align: center;
-  top: 25%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  padding: 30px;
-  padding-top: 50%;
-} */
+.ticketContainer{
+  background-color: brown;
+  border-radius: 25px;
+}

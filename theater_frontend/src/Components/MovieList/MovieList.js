@@ -32,7 +32,7 @@ export default class MovieList extends React.Component{
                         trailer={movie.trailer}
                         category={movie.category}
                         
-                        ticket_price={this.props.ticket_price}
+                        
                         passingAdult={this.props.addingAdult}
                         passingKid={this.props.addingKid}
                         passingSenior={this.props.addingSenior}
@@ -48,7 +48,7 @@ export default class MovieList extends React.Component{
 
 
         return(
-            <div style={{background: 'green'}}>
+             <div style={{background: 'green'}}>
                <h1 style={{textAlign: 'center'}} onClick={this.displayingList}> Check Out These Hot Movies! </h1>
                {this.renderMovieList()}
                

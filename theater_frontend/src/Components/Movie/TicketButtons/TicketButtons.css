@@ -4,6 +4,7 @@
     grid-template-columns: auto auto auto;
     padding: 10px;
     background-color: brown;
+    border-radius: 25px;
   }
   
   .button{
