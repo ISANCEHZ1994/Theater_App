@@ -1,6 +1,7 @@
 import React from 'react';
 import MovieList from '../MovieList/MovieList';
 import Menu from '../Menu/Menu';
+import Summary from '../Summary/Summary';
 
 
 export default class TheaterPage extends React.Component{
@@ -260,14 +261,23 @@ export default class TheaterPage extends React.Component{
 
             {MyFunction()}
 
-            <h3> These Are Your Tickets: </h3>
+            <Summary
+            adultCounter={this.state.adultCounter}
+            kidCounter={this.state.kidCounter}
+            seniorCounter={this.state.seniorCounter}
+            smallPopcornCounter={this.state.smallPopcornCounter}
+            mediumPopcornCounter={this.state.mediumPopcornCounter}
+            largePopcornCounter={this.state.largePopcornCounter}
+            
+            />
+            {/* <h3> These Are Your Tickets: </h3>
             <h4> {this.state.adultCounter} Adult Ticket(s) </h4>
             <h4> {this.state.kidCounter} Kid Ticket(s) </h4>
             <h4> {this.state.seniorCounter} Senior Ticket(s) </h4>
             <h3> Here Are Your Snacks: </h3>
             <h4> {this.state.smallPopcornCounter} : Small Popcorn </h4>
             <h4> {this.state.mediumPopcornCounter} : Medium Popcorn </h4>
-            <h4> {this.state.largePopcornCounter} : Large Popcorn </h4>
+            <h4> {this.state.largePopcornCounter} : Large Popcorn </h4> */}
             
         <h1>  YOUR TOTAL IS: $ {this.state.total_price} </h1>
                
