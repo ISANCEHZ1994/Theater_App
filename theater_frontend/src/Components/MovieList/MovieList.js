@@ -1,6 +1,6 @@
 import React from 'react';
 import Movie from '../Movie/Movie';
-import './MovieList.css'
+import './MovieList.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
 export default class MovieList extends React.Component{

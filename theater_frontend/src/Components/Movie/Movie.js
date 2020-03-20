@@ -1,6 +1,6 @@
 import React from 'react';
 import TicketButtons from './TicketButtons/TicketButtons';
-import './Movie.css'
+import './Movie.css';
 
 
 export default class Movie extends React.Component{
