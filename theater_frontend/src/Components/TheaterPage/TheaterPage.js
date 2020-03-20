@@ -151,7 +151,7 @@ export default class TheaterPage extends React.Component{
     }
     //CANDY METHODS  <------------------------------------------
     addingSnickers = () => {
-        const snickers = this.state.candy.snickers
+        const snickers = this.state.snickersPrice
         const total = this.state.total_price
         const counter = this.state.snickersCounter
         this.setState({
@@ -160,7 +160,7 @@ export default class TheaterPage extends React.Component{
         })
     }
     addingMnMs = () => {
-        const mm = this.state.candy.mnms
+        const mm = this.state.mnmsPrice
         const total = this.state.total_price
         const counter = this.state.mnmsCounter
         this.setState({
@@ -169,7 +169,7 @@ export default class TheaterPage extends React.Component{
         })
     }
     addingReeses = () => {
-        const reeses = this.state.candy.reeses
+        const reeses = this.state.reesesPrice
         const total = this.state.total_price
         const counter = this.state.reesesCounter
         this.setState({
@@ -209,21 +209,27 @@ export default class TheaterPage extends React.Component{
     addingRegularHotdog = () => {
         const regular = this.state.regularHotdogPrice
         const total = this.state.total_price
+        const counter = this.state.regularHotdogCounter
         this.setState({
+            regularHotdogCounter: counter + 1,
             total_price: regular + total
         }) 
     }
     addingExtraHotdog = () => {
         const extra = this.state.extraHotdogPrice
         const total = this.state.total_price
+        const counter = this.state.extraHotdogCounter
         this.setState({
+            extraHotdogCounter: counter + 1,
             total_price: extra + total
         })
     }
     addingDeluxeHotdog = () => {
         const deluxe = this.state.deluxeHotdogPrice
         const total = this.state.total_price
+        const counter = this.state.deluxeHotdogCounter
         this.setState({
+            deluxeHotdogCounter: counter + 1,
             total_price: deluxe + total
         })
     }
@@ -281,26 +287,26 @@ export default class TheaterPage extends React.Component{
 
             {MyFunction()}
 
-            <Summary
-            adultCounter={this.state.adultCounter}
-            kidCounter={this.state.kidCounter}
-            seniorCounter={this.state.seniorCounter}
-            smallPopcornCounter={this.state.smallPopcornCounter}
-            mediumPopcornCounter={this.state.mediumPopcornCounter}
-            largePopcornCounter={this.state.largePopcornCounter}
-            smallDrinkCounter={this.state.smallDrinkCounter}
-            mediumDrinkCounter={this.state.mediumDrinkCounter}
-            largeDrinkCounter={this.state.largeDrinkCounter}
-
-            />
-            {/* <h3> These Are Your Tickets: </h3>
-            <h4> {this.state.adultCounter} Adult Ticket(s) </h4>
-            <h4> {this.state.kidCounter} Kid Ticket(s) </h4>
-            <h4> {this.state.seniorCounter} Senior Ticket(s) </h4>
-            <h3> Here Are Your Snacks: </h3>
-            <h4> {this.state.smallPopcornCounter} : Small Popcorn </h4>
-            <h4> {this.state.mediumPopcornCounter} : Medium Popcorn </h4>
-            <h4> {this.state.largePopcornCounter} : Large Popcorn </h4> */}
+                <Summary
+                adultCounter={this.state.adultCounter}
+                kidCounter={this.state.kidCounter}
+                seniorCounter={this.state.seniorCounter}
+                smallPopcornCounter={this.state.smallPopcornCounter}
+                mediumPopcornCounter={this.state.mediumPopcornCounter}
+                largePopcornCounter={this.state.largePopcornCounter}
+                smallDrinkCounter={this.state.smallDrinkCounter}
+                mediumDrinkCounter={this.state.mediumDrinkCounter}
+                largeDrinkCounter={this.state.largeDrinkCounter}
+                snickersCounter={this.state.snickersCounter}
+                mnmsCounter={this.state.mnmsCounter}
+                reesesCounter={this.state.reesesCounter}
+                regularNachoCounter={this.state.regularNachoCounter}
+                extraNachoCounter={this.state.extraNachoCounter}
+                deluxeNachoCounter={this.state.deluxeNachoCounter}
+                regularHotdogCounter={this.state.regularHotdogCounter}
+                extraHotdogCounter={this.state.extraHotdogCounter}
+                deluxeHotdogCounter={this.state.deluxeHotdogCounter}
+                />
             
         <h1>  YOUR TOTAL IS: $ {this.state.total_price} </h1>
                
