@@ -6,9 +6,6 @@ import Snacks from './Snacks';
 
 export default class Summary extends React.Component{
 
-    state={
-        //maybe make have a boolean where it shows ONLY what I ordered
-    }
 
     render(){
         return(

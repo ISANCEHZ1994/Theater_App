@@ -58,7 +58,7 @@ export default class TheaterPage extends React.Component{
      ) 
     }
 
-    //TICKET METHODS
+    //TICKET METHODS <-----------------------------------------------
     addingAdultTicket = () => {
         const adult_price = this.state.adultPrice
         const total = this.state.total_price
@@ -78,7 +78,7 @@ export default class TheaterPage extends React.Component{
             kidCounter: counter + 1,
             total_price: kid_price + total
         })
-    }
+    };
     addingSeniorTicket=()=>{
         const senior_price = this.state.seniorPrice
         const total = this.state.total_price
@@ -88,8 +88,9 @@ export default class TheaterPage extends React.Component{
             seniorCounter: counter + 1,
             total_price: senior_price + total
         })
-    }
+    };
 
+    
     //POPCORN METHODS <------------------------------------------
     addingPopcornSmall = () => {
         const small = this.state.smallPopcornPrice

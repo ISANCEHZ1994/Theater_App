@@ -2,7 +2,11 @@ import React from 'react';
 
 
 export default class Snacks extends React.Component{
-    
+
+
+    state={
+        //maybe make have a boolean where it shows ONLY what I ordered
+    }
 
     
     render(){
