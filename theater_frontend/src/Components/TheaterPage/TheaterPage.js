@@ -293,21 +293,21 @@ export default class TheaterPage extends React.Component{
                 passingMediumPopcornCounter={this.state.mediumPopcornCounter}
                 passingLargePopcornCounter={this.state.largePopcornCounter}
 
-                smallDrinkCounter={this.state.smallDrinkCounter}
-                mediumDrinkCounter={this.state.mediumDrinkCounter}
-                largeDrinkCounter={this.state.largeDrinkCounter}
+                passingSmallDrinkCounter={this.state.smallDrinkCounter}
+                passingMediumDrinkCounter={this.state.mediumDrinkCounter}
+                passingLargeDrinkCounter={this.state.largeDrinkCounter}
 
                 passingSnickersCounter={this.state.snickersCounter}
                 passingMnmsCounter={this.state.mnmsCounter}
                 passingReesesCounter={this.state.reesesCounter}
 
-                regularNachoCounter={this.state.regularNachoCounter}
-                extraNachoCounter={this.state.extraNachoCounter}
-                deluxeNachoCounter={this.state.deluxeNachoCounter}
+                passingRegularNachoCounter={this.state.regularNachoCounter}
+                passingExtraNachoCounter={this.state.extraNachoCounter}
+                passingDeluxeNachoCounter={this.state.deluxeNachoCounter}
 
-                regularHotdogCounter={this.state.regularHotdogCounter}
-                extraHotdogCounter={this.state.extraHotdogCounter}
-                deluxeHotdogCounter={this.state.deluxeHotdogCounter}
+                passingRegularHotdogCounter={this.state.regularHotdogCounter}
+                passingExtraHotdogCounter={this.state.extraHotdogCounter}
+                passingDeluxeHotdogCounter={this.state.deluxeHotdogCounter}
                 />
             
         <h1>  YOUR TOTAL IS: $ {this.state.total_price} </h1>
