@@ -8,8 +8,6 @@ export default class TheaterPage extends React.Component{
 
 
     state={
-
-        // showAbout: false,
             movies: [],
             adultPrice: 10,
             adultCounter: 0,
@@ -47,8 +45,7 @@ export default class TheaterPage extends React.Component{
             extraHotdogCounter: 0,
             deluxeHotdogPrice: 7.5,
             deluxeHotdogCounter: 0,
-            total_price: 0
-        
+            total_price: 0     
     }
 
     componentDidMount(){
@@ -247,7 +244,7 @@ export default class TheaterPage extends React.Component{
             return (
               <h2 style={{textAlign: 'center'}}>{currDate}</h2>
             );
-          }
+          };
 
 
         return(
@@ -291,18 +288,23 @@ export default class TheaterPage extends React.Component{
                 adultCounter={this.state.adultCounter}
                 kidCounter={this.state.kidCounter}
                 seniorCounter={this.state.seniorCounter}
-                smallPopcornCounter={this.state.smallPopcornCounter}
-                mediumPopcornCounter={this.state.mediumPopcornCounter}
-                largePopcornCounter={this.state.largePopcornCounter}
+
+                passingSmallPopcornCounter={this.state.smallPopcornCounter}
+                passingMediumPopcornCounter={this.state.mediumPopcornCounter}
+                passingLargePopcornCounter={this.state.largePopcornCounter}
+
                 smallDrinkCounter={this.state.smallDrinkCounter}
                 mediumDrinkCounter={this.state.mediumDrinkCounter}
                 largeDrinkCounter={this.state.largeDrinkCounter}
-                snickersCounter={this.state.snickersCounter}
-                mnmsCounter={this.state.mnmsCounter}
-                reesesCounter={this.state.reesesCounter}
+
+                passingSnickersCounter={this.state.snickersCounter}
+                passingMnmsCounter={this.state.mnmsCounter}
+                passingReesesCounter={this.state.reesesCounter}
+
                 regularNachoCounter={this.state.regularNachoCounter}
                 extraNachoCounter={this.state.extraNachoCounter}
                 deluxeNachoCounter={this.state.deluxeNachoCounter}
+
                 regularHotdogCounter={this.state.regularHotdogCounter}
                 extraHotdogCounter={this.state.extraHotdogCounter}
                 deluxeHotdogCounter={this.state.deluxeHotdogCounter}

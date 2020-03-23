@@ -1,5 +1,7 @@
 import React from 'react';
 import './Summary.css';
+import Tickets from './Tickets';
+import Snacks from './Snacks';
 
 
 export default class Summary extends React.Component{
@@ -12,11 +14,22 @@ export default class Summary extends React.Component{
         return(
     <div style={{backgroundColor: 'purple'}}>
                 <h3> These Are Your Tickets: </h3>
-                    <h4> {this.props.adultCounter} Adult Ticket(s) </h4>
-                    <h4> {this.props.kidCounter} Kid Ticket(s) </h4>
-                    <h4> {this.props.seniorCounter} Senior Ticket(s) </h4>
+                        <Tickets 
+                        adultCount={this.props.adultCounter}
+                        kidCount={this.props.kidCounter}
+                        seniorCount={this.props.seniorCounter}
+                        />
                 <h3> Here Are Your Snacks: </h3>
-                    <h4> {this.props.smallPopcornCounter}: S Popcorn </h4>
+                <Snacks
+                smallPopcornCounter={this.props.passingSmallPopcornCounter}
+                mediumPopcornCounter={this.props.passingMediumPopcornCounter}
+                largePopcornCounter={this.props.passingLargePopcornCounter}
+
+                snickersCounter={this.props.passingSnickersCounter}
+                mnmsCounter={this.props.passingMnmsCounter}
+                reesesCounter={this.props.passingReesesCounter}
+                />
+                    {/* <h4> {this.props.smallPopcornCounter}: S Popcorn </h4>
                     <h4> {this.props.mediumPopcornCounter}: M Popcorn </h4>
                     <h4> {this.props.largePopcornCounter}: L Popcorn </h4>
                     <h4> {this.props.snickersCounter}: Snicker(s) </h4>
@@ -30,7 +43,7 @@ export default class Summary extends React.Component{
                     <h4> {this.props.deluxeHotdogCounter}: DLHotDog </h4>
                     <h4> {this.props.smallDrinkCounter}: S Drink(s) </h4>
                     <h4> {this.props.mediumDrinkCounter}: M Drink(s) </h4>
-                    <h4> {this.props.largeDrinkCounter}: L Drink(s) </h4>
+                    <h4> {this.props.largeDrinkCounter}: L Drink(s) </h4> */}
     </div>
         )
     }
