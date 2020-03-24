@@ -10,13 +10,14 @@ export default class Summary extends React.Component{
     render(){
         return(
     <div style={{backgroundColor: 'purple'}}>
-                <h3> These Are Your Tickets: </h3>
+        <h1 style={{textAlign: 'center'}}> YOUR TOTAL </h1>
+                <h3> Purchased Tickets: </h3>
                         <Tickets 
                         adultCount={this.props.adultCounter}
                         kidCount={this.props.kidCounter}
                         seniorCount={this.props.seniorCounter}
                         />
-                <h3> Here Are Your Snacks: </h3>
+                <h3> Purchased Snacks: </h3>
                         <Snacks
                         smallPopcornCounter={this.props.passingSmallPopcornCounter}
                         mediumPopcornCounter={this.props.passingMediumPopcornCounter}
