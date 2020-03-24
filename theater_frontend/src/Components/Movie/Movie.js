@@ -16,8 +16,6 @@ export default class Movie extends React.Component{
 
     }
 
-   
-    
     renderTickets = () => {
         if(this.state.showButtons === true){
             return(
@@ -28,8 +26,7 @@ export default class Movie extends React.Component{
                      addingKid={this.props.passingKid}
                      addingSenior={this.props.passingSenior}
                      />
-                
-            </div>
+                 </div>
             )
         }
         if(this.state.showButtons === false){
@@ -40,10 +37,7 @@ export default class Movie extends React.Component{
             )
         }
     }
-
-
     render(){
-
 
         return(
         <div style={{backgroundColor: 'blue', textAlign: 'center'}} className='movieCard' > 
@@ -55,7 +49,6 @@ export default class Movie extends React.Component{
                 </div>
                 
                 {this.renderTickets()}
-                
                
         </div>
         )

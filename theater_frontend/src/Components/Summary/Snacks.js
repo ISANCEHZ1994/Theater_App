@@ -11,7 +11,6 @@ export default class Snacks extends React.Component{
             )
         }
     };
-
     displayMedPop = () => {
         if(this.props.mediumPopcornCounter > 0){
             return(
@@ -20,7 +19,6 @@ export default class Snacks extends React.Component{
             )
         }
     };
-
     displayLargePop = () => { 
         if(this.props.largePopcornCounter > 0){
            return(
@@ -28,7 +26,6 @@ export default class Snacks extends React.Component{
             )
         }
     };
-
     displaySnickers = () => {
         if(this.props.snickersCounter > 0){
             return(
@@ -36,7 +33,6 @@ export default class Snacks extends React.Component{
             )
         }
     };
-
     displayMnm = () => {
         if(this.props.mnmsCounter > 0 ){
             return(
@@ -44,7 +40,6 @@ export default class Snacks extends React.Component{
             )
         }
     };
-
     displayReeses = () => {
         if(this.props.reesesCounter > 0){
             return(
@@ -52,14 +47,72 @@ export default class Snacks extends React.Component{
             )
         }
     };
-
     displayRegNacho = () => {
-        
+        if(this.props.regularNachoCounter > 0){
+            return(
+                <h4> {this.props.regularNachoCounter}: RNach </h4>
+            )
+        }
+    };
+    displayExtraNacho = () =>{
+        if(this.props.extraNachoCounter > 0){
+            return(
+                <h4> {this.props.extraNachoCounter}: EXNach </h4>
+            )
+        }
+    };
+    displayDeluxeNacho = () => {
+        if(this.props.deluxeNachoCounter > 0){
+            return(
+                <h4> {this.props.deluxeNachoCounter}: DLNach </h4>
+            )
+        }
+    };
+    displayRegHotdog = () => {
+        if(this.props.regularHotdogCounter > 0){
+            return(
+                <h4> {this.props.regularHotdogCounter}: RHotDog </h4>
+            )
+        }
     };
 
-    
-    render(){
+    displayExtraHotdog = () => {
+        if(this.props.extraHotdogCounter > 0){
+            return(
+                <h4> {this.props.extraHotdogCounter}: EXHotDog </h4>
+            )
+        }
+    }
+    displayDeluxeHotdog = () => {
+        if(this.props.deluxeHotdogCounter > 0){
+            return(
+                <h4> {this.props.deluxeHotdogCounter}: DLHotDog </h4>
+            )
+        }
+    }
+    displaySmallSoda = () => {
+        if(this.props.smallDrinkCounter > 0){
+            return(
+                <h4> {this.props.smallDrinkCounter}: S Drink(s) </h4>
+            )
+        }
+    }
+    displayMedSoda = () => {
+        if(this.props.mediumDrinkCounter > 0){
+            return(
+            <h4> {this.props.mediumDrinkCounter}: M Drink(s) </h4>
+            )
+        }
+    }
+    displayLargeSoda = () =>{
+        if(this.props.largeDrinkCounter > 0){
+           return( 
+            <h4> {this.props.largeDrinkCounter}: L Drink(s) </h4>
+           )
+        }
+    }
 
+    render(){
 
         return(
             <>
@@ -67,22 +120,21 @@ export default class Snacks extends React.Component{
                     {this.displayMedPop()}
                     {this.displayLargePop()}
                    
-
                     {this.displaySnickers()}
                     {this.displayMnm()}
                     {this.displayReeses()}
 
-                    <h4> {this.props.regularNachoCounter}: RNach </h4>
-                    <h4> {this.props.extraNachoCounter}: EXNach </h4>
-                    <h4> {this.props.deluxeNachoCounter}: DLNach </h4>
+                   {this.displayRegNacho()}
+                   {this.displayExtraNacho()}
+                   {this.displayDeluxeNacho()}
 
-                    <h4> {this.props.regularHotdogCounter}: RHotDog </h4>
-                    <h4> {this.props.extraHotdogCounter}: EXHotDog </h4>
-                    <h4> {this.props.deluxeHotdogCounter}: DLHotDog </h4>
+                   {this.displayRegHotdog()}
+                   {this.displayExtraHotdog()}
+                   {this.displayDeluxeHotdog()}
 
-                    <h4> {this.props.smallDrinkCounter}: S Drink(s) </h4>
-                    <h4> {this.props.mediumDrinkCounter}: M Drink(s) </h4>
-                    <h4> {this.props.largeDrinkCounter}: L Drink(s) </h4>
+                   {this.displaySmallSoda()}
+                   {this.displayMedSoda()}
+                   {this.displayLargeSoda()}
             </>
         )
     }

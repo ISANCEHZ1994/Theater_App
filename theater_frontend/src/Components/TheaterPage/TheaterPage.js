@@ -47,7 +47,6 @@ export default class TheaterPage extends React.Component{
             deluxeHotdogCounter: 0,
             total_price: 0     
     }
-
     componentDidMount(){
         fetch('http://localhost:3000/movies')
         .then( resp => resp.json() )
@@ -57,7 +56,6 @@ export default class TheaterPage extends React.Component{
             }) 
      ) 
     }
-
     //TICKET METHODS <-----------------------------------------------
     addingAdultTicket = () => {
         const adult_price = this.state.adultPrice

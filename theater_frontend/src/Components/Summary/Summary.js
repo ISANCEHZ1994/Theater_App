@@ -10,7 +10,7 @@ export default class Summary extends React.Component{
     render(){
         return(
     <div style={{backgroundColor: 'purple'}}>
-        <h1 style={{textAlign: 'center'}}> YOUR TOTAL </h1>
+        <h1 style={{textAlign: 'center'}}> YOUR RECEIPT </h1>
                 <h3> Purchased Tickets: </h3>
                         <Tickets 
                         adultCount={this.props.adultCounter}
