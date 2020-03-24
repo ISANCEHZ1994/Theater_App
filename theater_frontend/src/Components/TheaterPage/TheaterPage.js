@@ -88,7 +88,6 @@ export default class TheaterPage extends React.Component{
         })
     };
 
-    
     //POPCORN METHODS <------------------------------------------
     addingPopcornSmall = () => {
         const small = this.state.smallPopcornPrice
@@ -245,7 +244,6 @@ export default class TheaterPage extends React.Component{
             );
           };
 
-
         return(
             <div style={{backgroundColor: 'red'}}>
                <h1 style={{textAlign: 'center'}}> Izzy's 'Deluxe' Theater </h1>
@@ -255,7 +253,7 @@ export default class TheaterPage extends React.Component{
                addingAdult={this.addingAdultTicket}
                addingKid={this.addingKidTicket}
                addingSenior={this.addingSeniorTicket}
-
+               idMethod={this.obtainMovieId}
                />
                <Menu 
                 passingSmallPopcorn={this.addingPopcornSmall}
