@@ -21,10 +21,13 @@ export default class Movie extends React.Component{
             return(
                 <div className='ticketContainer'>
                     <TicketButtons
-                    
+
                      addingAdult={this.props.passingAdult}
                      addingKid={this.props.passingKid}
                      addingSenior={this.props.passingSenior}
+                     movieTitle={this.props.title}
+                   
+
                      />
                  </div>
             )

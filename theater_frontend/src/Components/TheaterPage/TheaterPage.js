@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieList from '../MovieList/MovieList';
 import Menu from '../Menu/Menu';
-import Summary from '../Receipt/Receipt';
+import Receipt from '../Receipt/Receipt';
 
 
 export default class TheaterPage extends React.Component{
@@ -57,7 +57,7 @@ export default class TheaterPage extends React.Component{
      ) 
     };
     //TICKET METHODS <-----------------------------------------------
-    addingAdultTicket = () => {
+    addingAdultTicket = (e) => {
         const adult_price = this.state.adultPrice
         const total = this.state.total_price
         const counter = this.state.adultCounter
@@ -66,8 +66,11 @@ export default class TheaterPage extends React.Component{
             adultCounter: counter + 1,
             total_price: adult_price + total
         })
+    
+        console.log('should be an adult ticket for', e)
+
     };
-    addingKidTicket = () => {
+    addingKidTicket = (e) => {
         const kid_price = this.state.kidPrice
         const total = this.state.total_price
         const counter = this.state.kidCounter
@@ -76,8 +79,10 @@ export default class TheaterPage extends React.Component{
             kidCounter: counter + 1,
             total_price: kid_price + total
         })
+
+        console.log('should be a kid ticket for', e)
     };
-    addingSeniorTicket=()=>{
+    addingSeniorTicket=(e)=>{
         const senior_price = this.state.seniorPrice
         const total = this.state.total_price
         const counter = this.state.seniorCounter
@@ -86,6 +91,8 @@ export default class TheaterPage extends React.Component{
             seniorCounter: counter + 1,
             total_price: senior_price + total
         })
+
+        console.log('should be a senior ticket for', e)
     };
 
     
@@ -283,7 +290,7 @@ export default class TheaterPage extends React.Component{
 
             {MyFunction()}
 
-                <Summary
+                <Receipt
                 adultCounter={this.state.adultCounter}
                 kidCounter={this.state.kidCounter}
                 seniorCounter={this.state.seniorCounter}

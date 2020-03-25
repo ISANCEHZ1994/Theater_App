@@ -31,7 +31,7 @@ export default class MovieList extends React.Component{
                             released={movie.released}
                             trailer={movie.trailer}
                             category={movie.category}
-                            method={this.props.idMethod}
+                            
                             
                             passingAdult={this.props.addingAdult}
                             passingKid={this.props.addingKid}
