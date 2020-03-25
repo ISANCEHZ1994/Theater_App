@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieList from '../MovieList/MovieList';
 import Menu from '../Menu/Menu';
-import Summary from '../Summary/Summary';
+import Summary from '../Receipt/Receipt';
 
 
 export default class TheaterPage extends React.Component{
@@ -46,7 +46,7 @@ export default class TheaterPage extends React.Component{
             deluxeHotdogPrice: 7.5,
             deluxeHotdogCounter: 0,
             total_price: 0     
-    }
+    };
     componentDidMount(){
         fetch('http://localhost:3000/movies')
         .then( resp => resp.json() )
@@ -55,7 +55,7 @@ export default class TheaterPage extends React.Component{
                 movies: dataMovies
             }) 
      ) 
-    }
+    };
     //TICKET METHODS <-----------------------------------------------
     addingAdultTicket = () => {
         const adult_price = this.state.adultPrice
@@ -66,7 +66,7 @@ export default class TheaterPage extends React.Component{
             adultCounter: counter + 1,
             total_price: adult_price + total
         })
-    }
+    };
     addingKidTicket = () => {
         const kid_price = this.state.kidPrice
         const total = this.state.total_price
@@ -88,6 +88,8 @@ export default class TheaterPage extends React.Component{
         })
     };
 
+    
+
     //POPCORN METHODS <------------------------------------------
     addingPopcornSmall = () => {
         const small = this.state.smallPopcornPrice
@@ -97,7 +99,7 @@ export default class TheaterPage extends React.Component{
             smallPopcornCounter: counter + 1,
             total_price: small + total
         })
-    }
+    };
     addingPopcornMedium = () => {
         const medium = this.state.mediumPopcornPrice
         const total = this.state.total_price
@@ -106,7 +108,7 @@ export default class TheaterPage extends React.Component{
             mediumPopcornCounter: counter + 1,
             total_price: medium + total
         })
-    }
+    };
     addingPopcornLarge = () => {
         const large = this.state.largePopcornPrice
         const total = this.state.total_price
@@ -115,7 +117,7 @@ export default class TheaterPage extends React.Component{
             largePopcornCounter: counter + 1,
             total_price: large + total
         })
-    }
+    };
     //SOFT DRINK METHODS  <------------------------------------------
     addingSoftdrinkSmall = () => {
         const small = this.state.smallDrinkPrice
@@ -125,7 +127,7 @@ export default class TheaterPage extends React.Component{
             smallDrinkCounter: counter + 1 ,
             total_price: small + total
         })
-    }
+    };
     addingSoftdrinkMedium = () => {
         const medium = this.state.mediumDrinkPrice
         const total = this.state.total_price 
@@ -134,7 +136,7 @@ export default class TheaterPage extends React.Component{
             mediumDrinkCounter: counter + 1,
             total_price: medium + total
         })
-    }
+    };
     addingSoftdrinkLarge = () => {
         const large = this.state.largeDrinkPrice
         const total = this.state.total_price
@@ -143,7 +145,7 @@ export default class TheaterPage extends React.Component{
             largeDrinkCounter: counter +1,
             total_price: large + total
         })
-    }
+    };
     //CANDY METHODS  <------------------------------------------
     addingSnickers = () => {
         const snickers = this.state.snickersPrice
@@ -153,7 +155,7 @@ export default class TheaterPage extends React.Component{
             snickersCounter: counter + 1,
             total_price: snickers + total
         })
-    }
+    };
     addingMnMs = () => {
         const mm = this.state.mnmsPrice
         const total = this.state.total_price
@@ -162,7 +164,7 @@ export default class TheaterPage extends React.Component{
             mnmsCounter: counter +1,
             total_price: mm + total
         })
-    }
+    };
     addingReeses = () => {
         const reeses = this.state.reesesPrice
         const total = this.state.total_price
@@ -171,7 +173,7 @@ export default class TheaterPage extends React.Component{
             reesesCounter: counter +1,
             total_price: reeses + total
         })
-    }
+    };
     //NACHO METHODS  <------------------------------------------
     addingRegularNachos = () => {
         const regular = this.state.regularNachoPrice
@@ -181,7 +183,7 @@ export default class TheaterPage extends React.Component{
             regularNachoCounter: counter + 1,
             total_price: regular + total
         })
-    }
+    };
     addingExtraNachos = () => {
         const extra = this.state.extraNachoPrice
         const total = this.state.total_price
@@ -190,7 +192,7 @@ export default class TheaterPage extends React.Component{
             extraNachoCounter: counter + 1,
             total_price: extra + total
         })
-    }
+    };
     addingDeluxeNachos = () => {
         const deluxe = this.state.deluxeNachoPrice
         const total = this.state.total_price
@@ -199,7 +201,7 @@ export default class TheaterPage extends React.Component{
             deluxeNachoCounter: counter + 1,
             total_price: deluxe + total
         })
-    }
+    };
     //HOTDOG METHODS  <------------------------------------------
     addingRegularHotdog = () => {
         const regular = this.state.regularHotdogPrice
@@ -209,7 +211,7 @@ export default class TheaterPage extends React.Component{
             regularHotdogCounter: counter + 1,
             total_price: regular + total
         }) 
-    }
+    };
     addingExtraHotdog = () => {
         const extra = this.state.extraHotdogPrice
         const total = this.state.total_price
@@ -218,7 +220,7 @@ export default class TheaterPage extends React.Component{
             extraHotdogCounter: counter + 1,
             total_price: extra + total
         })
-    }
+    };
     addingDeluxeHotdog = () => {
         const deluxe = this.state.deluxeHotdogPrice
         const total = this.state.total_price
@@ -227,7 +229,7 @@ export default class TheaterPage extends React.Component{
             deluxeHotdogCounter: counter + 1,
             total_price: deluxe + total
         })
-    }
+    };
     
     render(){
 

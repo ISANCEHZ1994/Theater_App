@@ -19,7 +19,7 @@ export default class Movie extends React.Component{
     renderTickets = () => {
         if(this.state.showButtons === true){
             return(
-                <div className='ticketContainer'  >
+                <div className='ticketContainer'>
                     <TicketButtons
                     
                      addingAdult={this.props.passingAdult}

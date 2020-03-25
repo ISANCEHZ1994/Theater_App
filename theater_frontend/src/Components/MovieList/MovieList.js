@@ -13,7 +13,7 @@ export default class MovieList extends React.Component{
         this.setState({
             showList: !this.state.showList
         })
-    }
+    };
    
 
     renderMovieList = () => {
@@ -22,21 +22,21 @@ export default class MovieList extends React.Component{
                     <Row style={{ paddingLeft: 0, paddingRight: 0 }}>
                         {this.props.movies.map( movie => 
                         <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
-                        <Movie 
-                        key={movie.id}
-                        title={movie.title}
-                        description={movie.description}
-                        mpaa={movie.mpaa}
-                        poster={movie.poster}
-                        released={movie.released}
-                        trailer={movie.trailer}
-                        category={movie.category}
-                        method={this.props.idMethod}
-                        
-                        passingAdult={this.props.addingAdult}
-                        passingKid={this.props.addingKid}
-                        passingSenior={this.props.addingSenior}
-                        />
+                            <Movie 
+                            key={movie.id}
+                            title={movie.title}
+                            description={movie.description}
+                            mpaa={movie.mpaa}
+                            poster={movie.poster}
+                            released={movie.released}
+                            trailer={movie.trailer}
+                            category={movie.category}
+                            method={this.props.idMethod}
+                            
+                            passingAdult={this.props.addingAdult}
+                            passingKid={this.props.addingKid}
+                            passingSenior={this.props.addingSenior}
+                            />
                         </Col>
                         )}
                      </Row>
@@ -49,11 +49,9 @@ export default class MovieList extends React.Component{
 
         return(
              <div style={{background: 'green'}}>
-               <h1 style={{textAlign: 'center'}} onClick={this.displayingList}> Check Out These Hot Movies! </h1>
-               {this.renderMovieList()}
-               
-              
-                <br></br>
+                <h1 style={{textAlign: 'center'}} onClick={this.displayingList}> Check Out These Hot Movies! </h1>
+                {this.renderMovieList()}
+                    <br></br>
             </div>
         )
     }
